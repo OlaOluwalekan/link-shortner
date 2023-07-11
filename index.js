@@ -17,7 +17,7 @@ app.get('/', (req, res) => {
   res.send('link-shortener')
 })
 
-app.use('/api/v1/', linkRouter)
+app.use('/', linkRouter)
 app.use('/api/v1/links', linksRouter)
 
 app.use(notFoundMiddleware)
