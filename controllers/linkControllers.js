@@ -3,8 +3,8 @@ const Link = require('../models/Link')
 const { StatusCodes } = require('http-status-codes')
 
 const createLink = async (req, res) => {
-  const link = await Link.create(req.body)
-  res.status(StatusCodes.CREATED).json({ link })
+  const newLink = await Link.create(req.body)
+  res.status(StatusCodes.CREATED).json({ newLink })
 }
 
 const getLink = async (req, res) => {

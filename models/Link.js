@@ -9,7 +9,6 @@ const LinkSchema = new Schema(
     },
     shortLink: {
       type: String,
-      // required: [true, 'short link is required'],
       unique: true,
     },
     fullLink: {
