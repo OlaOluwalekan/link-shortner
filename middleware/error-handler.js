@@ -21,7 +21,7 @@ const errorHandlerMiddleware = (err, req, res, next) => {
     customError.message = 'short link already taken'
   }
 
-  return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ err })
+  // return res.status(StatusCodes.INTERNAL_SERVER_ERROR).json({ err })
   return res.status(customError.statusCode).json({
     message: customError.message,
   })
